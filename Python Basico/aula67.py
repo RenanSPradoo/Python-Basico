@@ -1,18 +1,20 @@
-print('-=' * 30)
-print('Sequencia de Fibonacci: ')
-print('-=' * 30)
+resp = 'S'
+soma = quant = media = maior = menor = 0
 
-n = int(input('Quantos termos você quer mostrar? '))
-t1 = 0
-t2 = 1
-print('~' * 30)
-print(f' {t1} ➜ {t2} ', end='')
-cont = 3
+while resp in 'Ss':
+    num = int(input('Digite um numero: '))
+    soma += num
+    quant += 1
+    if quant == 1:
+        maior = menor = num
+    else:
+        if num > maior:
+            maior = num
+        if num < menor:
+            menor = num
+    resp = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
 
-while cont <= n:
-    t3 = t1 + t2
-    print(f' ➜ {t3} ', end='')
-    t1 = t2
-    t2 = t3
-    cont += 1
-print(' ➜ FIM')
+media = soma / quant
+
+print(f'Você digitou {quant} numeros e a media foi {media}')
+print(f'O maior valor foi {maior} e o menor foi {menor}')
