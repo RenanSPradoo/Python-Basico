@@ -27,6 +27,6 @@ print(f'A soma dos valores da terceira coluna é: {somaColuna}')
 # Encontrando o maior valor da segunda linha
 maior = matriz[1][0]
 for coluna in range(1, 3):  # Começa do segundo elemento, pois já inicializamos com o primeiro
-    if matriz[1][coluna] > maior:
+    if matriz[1][coluna] > maior: 
         maior = matriz[1][coluna]
 print(f'O maior valor da segunda linha é {maior}')
